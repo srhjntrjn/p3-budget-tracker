@@ -1,0 +1,148 @@
+body, html {
+    margin: 0;
+    padding: 0;
+  background-color: black;
+    color: grey;
+    /*font-family: Apercu,Source Sans Pro,Helvetica,Arial,sans-serif;*/
+    line-height: 1.5;
+    scroll-behavior: smooth;
+    font-family: 'Share Tech Mono', monospace;
+}
+.grid-container{
+    height: 100vh;
+   display: grid;
+   grid-template: 10% / 80% 20%;
+   
+    
+    /* possible value of grid-template-column 1fr, repeat */
+    /* grid-template-rows: 10px 50px 100px;
+      grid-template-columns: 100px 10px 100px;
+    /* grid-template: row sizes / column font-size */
+    grid-template-areas: 
+    "header nav"
+    "home home"
+    "aboutme links"
+    "footer footer";
+}
+a {
+    color: grey;
+    text-decoration: none !important;
+}
+
+.grid-item{
+   
+    text-align: center;
+    font-weight: bold;
+    
+}
+.header{
+    vertical-align: middle;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: start;
+    align-self: center;
+    padding-left: 20px;
+}
+.nav{
+    vertical-align: middle;
+    padding-right: 30px;
+    display: flex;
+    justify-content: start;
+    align-self: center;
+    padding-left: 20px;
+    
+}
+.nav1 a{
+font-size: 20px;
+padding-left: 10px;
+
+}
+
+.logo h2{
+    vertical-align: middle;
+   
+}
+a:hover{
+    color: white;
+}
+.logo img{
+width: 40px;
+height: 40px;
+border-radius: 50px;
+vertical-align: middle;
+padding-right: 10px;
+
+}
+.logo img:hover{
+width: 45px;
+height: 45px;
+border-radius: 50px;
+
+}
+.homebody{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    justify-content:center;
+    flex-wrap: wrap;
+    padding-left: 50px;
+  
+}
+.homebody h1 {
+    font-size: 70px;
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+.homebody p{
+    font-size: 50px;
+    padding: 0;
+    margin: 0;
+}
+.image-container img{
+    justify-content:end;
+    align-self: flex-end;
+    width: 40%;
+    height: auto;
+    display: inline;
+    
+}
+.sidenav{
+    display: flex;
+    justify-content: flex-end;
+    align-self: center;
+}
+.sidenav ul {
+
+        list-style-type: none;
+        padding-left: 0px;
+      
+}
+.sidenav li {
+    box-sizing: border-box;
+    width: 60px;
+    height: 15px;
+    border-radius: 10px;
+    text-decoration: none !important;
+    background-color: grey;
+    border: 1px solid darkgray;
+    margin: 40px;
+    
+}
+
+.sidenav li:hover{
+    background-color: darkgrey;
+}
+.sidenav li.active:before {
+    background: #f64d28;
+    opacity: 1;
+}
+.sidenavline {
+    box-sizing: border-box;
+    width: 20px;
+    height: 10px;
+    text-decoration: none !important;
+    color: grey;
+ 
+}
+    
