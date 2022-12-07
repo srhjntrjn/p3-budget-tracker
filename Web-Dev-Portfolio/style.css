@@ -41,7 +41,9 @@ a {
     display: flex;
     justify-content: start;
     align-self: center;
-    padding-left: 20px;
+    padding-left: 50px;
+    padding-top: 20px;
+    margin-top: 10px;
 }
 .nav{
     vertical-align: middle;
@@ -85,7 +87,7 @@ border-radius: 50px;
     margin: 0;
     justify-content:center;
     flex-wrap: wrap;
-    padding-left: 50px;
+    padding-left: 150px;
   
 }
 .homebody h1 {
@@ -102,7 +104,7 @@ border-radius: 50px;
 .image-container img{
     justify-content:end;
     align-self: flex-end;
-    width: 40%;
+    width: 45%;
     height: auto;
     display: inline;
     
@@ -127,11 +129,13 @@ border-radius: 50px;
     background-color: grey;
     border: 1px solid darkgray;
     margin: 40px;
+    opacity: 70%;
     
 }
 
 .sidenav li:hover{
     background-color: darkgrey;
+    opacity: 100%;
 }
 .sidenav li.active:before {
     background: #f64d28;
