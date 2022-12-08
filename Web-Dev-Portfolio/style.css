@@ -2,7 +2,7 @@ body, html {
     margin: 0;
     padding: 0;
   background-color: black;
-    color: #777777;
+    color: white;
     /*font-family: Apercu,Source Sans Pro,Helvetica,Arial,sans-serif;*/
     line-height: 1.5;
     scroll-behavior: smooth;
@@ -59,8 +59,8 @@ margin: 20px;
     vertical-align: middle;
    
 }
-a:hover{
-    color: white;
+body a:hover{
+    color: lightgreen;
 }
 .logo img{
 width: 40px;
@@ -148,10 +148,11 @@ body .sidenav, html .sidenav{
     opacity: 100%;
     transform: 1px;
 }
-.sidenav li.active {
-    background: #f64d28;
-    opacity: 1;
+.sidenav li:active {
+    background-color: lightgreen;
+    
 }
+
 .sidenavline {
     box-sizing: border-box;
     width: 20px;
@@ -180,14 +181,15 @@ body .sidenav, html .sidenav{
 .article_content p{
   justify-self: flex-start;
     font-size: 20px;
-   
     letter-spacing: 5px;
     line-height: 1.8;
+    color: white;
 }
 .aboutme a {
     color: white;
-    text-decoration: none !important;
+    
 }
+
 .header a {
     color: grey;
     text-decoration: none !important;
@@ -200,6 +202,7 @@ body .sidenav, html .sidenav{
 }
 .resume {
     padding: 20px;
+    margin-bottom: 100px;
 }
 .resume h3:hover{
     text-decoration: underline;
@@ -211,4 +214,36 @@ body .sidenav, html .sidenav{
 }
 .technologist {
     background-image: url(images/female-technologist.png);
+}
+.work{
+    padding-bottom: 30px;
+}
+.article .work {
+    box-sizing: border-box;
+    justify-content: center;
+}
+.work .article_title{
+    padding-right: 250px;
+}
+.work a {
+   
+    text-decoration: none !important;
+    color: white;
+}
+table {
+    width: 100%;
+    vertical-align: center;
+    padding-right: 50px;
+    margin: 50px;
+    margin-right: 20px;
+    color: white;
+    font-size: 18px;
+   
+}
+tr {
+    height: 80px;
+}
+.mainrow{
+    width: 300px;
+    padding-left: 50px;
 }
