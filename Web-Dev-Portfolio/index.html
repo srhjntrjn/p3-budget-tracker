@@ -10,57 +10,80 @@
 </head>
 <body>
     <div class="grid-container">
-        <div class="grid-item header">
+        <div class="grid-item header" id="header">
             <div class="logo"> 
-                <a href=""><h2> <img src="images/girl.png" alt="">Sarah Jean Trajano</h2></a>
+                <a href=""><h2> <img src="images/girl.png" alt="Me">Sarah Jean Trajano</h2></a>
             </div>
-            
+            <div class="nav">
+                <nav class="nav1">
+                    <a href="aboutme.html"> <b>About   </b></a> 
+                    <a href="contactus.php"> <b>Playground  </b></a>
+                   
+                  </nav>
+            </div>
         </div>
-        <div class="grid-item nav">
-            <nav class="nav1">
-                <a href="aboutme.html"> <b>About   </b></a> 
-                <a href="contactus.php"> <b>Hobbies  </b></a>
-                <a href="contactus.php"> <b>Work  </b> </a>
-              </nav>
-        </div>
-        <div class="grid-item home">
+      
+        <div class="grid-item home" id="home">
+            <div class="sidenav">
+                <nav>
+                    <ul>
+                        <li><a href="#header"><div class="sidenavline"></div> </a></li>
+                        <li><a href="#aboutme"><div class="sidenavline"></div> </a></li>
+                        <li><a href="#work"><div class="sidenavline"></div> </a> </li>
+                        <li><a href="#myhobby"><div class="sidenavline"></div> </a> </li>
+                        <li><a href="#mylinks"><div class="sidenavline"></div> </a> </li>
+                  </ul>
+                </nav>
+            </div>
             <div class="homebody">
                
-                <div class="homecontent">  <h1><b>I'm Sarah</b>  </h1> 
-                    <p>an aspiring Wed Developer</p>
+                <div class="homecontent">  <h1><b> Hi, I'm Sarah!</b>   </h1> 
+                    <p>an aspiring Web Developer</p>
                 </div>
                 <div class="image-container">
-                    <img src="images/3dfemalesiping.png" alt="">
+                    <img src="images/3dfemalesiping.png" alt="3dfemalesiping">
                 </div>
                
                 
             </div>
         </div>
-        <div class="grid-item sidenav">
-            <nav>
-                <ul>
-                    <li><a href="#about"><div class="sidenavline"></div> </a></li>
-                    <li><a href="#experience"></a> </li>
-                    <li><a href="#education"></a> </li>
-                    <li><a href="#skills"></a> </li>
-                    <li><a href="#interest"></a></li>
-                    <li><a href="#awards"></a></li>
-                </ul>
-            </nav>
+       
+        <div class="grid-item aboutme" id="aboutme">
+            <article class="background">
+                <div class="article_title">About Me</div>
+                 <div class="article_content">
+                    <p>
+                            I completed my Bachelor's degree in Computer Science  from
+                            <a class = "underline-link" href="https://www.facebook.com/profile.php?id=100075941256181" target="_blank">
+                            Pamantasan ng Lungsod ng Pasig</a> in 2014.
+                            While earning my degree, I completed a 5 month internship at <a class = "underline-link" href="https://www.facebook.com/peacegovph" target="_blank">Office of the Presidential Adviser on the Peace Process (OPAPP).</a> 
+                            After graduating I joined  	<a class = "underline-link" href="#" target="_blank">OPAPP </a> 
+                            as a Web Developer. Currently, I'm working as a Project Officer in the same company and spending my time advancing my skills in web-development.  	
+                    </p>
+                </div>
+                <div class="resume">
+                    <a class="status" href="images/myresume.pdf" target="_blank"> 
+                    
+                        <h3><img src="images/female-technologist.png" alt="Download My Resume">
+                        Interested in working together? View my resume and reach out! </h3>
+                  
+                    </a>
+                </div>
+                
+            </article>
         </div>
-        <div class="grid-item aboutme">aboutme
+        <div class="grid-item work" id="work">work
 
         </div>
-        <div class="grid-item mylinks">mylinks
-
-        </div>
-        <div class="grid-item myhobby">myhobby
+        <div class="grid-item myhobby" id="myhobby">myhobby
 
         </div>
     
-        <div class="grid-item qork">work
+        <div class="grid-item mylinks" id="mylinks">mylinks
 
         </div>
+        
+        
         <div class="grid-item footer">footer
 
         </div>

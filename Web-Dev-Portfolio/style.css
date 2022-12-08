@@ -2,7 +2,7 @@ body, html {
     margin: 0;
     padding: 0;
   background-color: black;
-    color: grey;
+    color: #777777;
     /*font-family: Apercu,Source Sans Pro,Helvetica,Arial,sans-serif;*/
     line-height: 1.5;
     scroll-behavior: smooth;
@@ -11,52 +11,47 @@ body, html {
 .grid-container{
     height: 100vh;
    display: grid;
-   grid-template: 10% / 80% 20%;
-   
-    
-    /* possible value of grid-template-column 1fr, repeat */
-    /* grid-template-rows: 10px 50px 100px;
-      grid-template-columns: 100px 10px 100px;
-    /* grid-template: row sizes / column font-size */
-    grid-template-areas: 
+    grid-template: 10% / 100%; 
+   padding: 20px;
+     /* grid-template-areas: 
     "header nav"
-    "home home"
-    "aboutme links"
-    "footer footer";
+    "sidenav home"
+    "aboutme"
+    "myhobby sidenav"
+    "mylinks mylinks"
+    "footer footer";  */
 }
-a {
-    color: grey;
-    text-decoration: none !important;
-}
+
 
 .grid-item{
    
     text-align: center;
     font-weight: bold;
+    border: 1px solid green;
     
 }
+
 .header{
     vertical-align: middle;
     padding-bottom: 10px;
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     align-self: center;
     padding-left: 50px;
-    padding-top: 20px;
+   
     margin-top: 10px;
 }
 .nav{
-    vertical-align: middle;
-    padding-right: 30px;
-    display: flex;
-    justify-content: start;
-    align-self: center;
-    padding-left: 20px;
     
+    
+    display: flex;
+   
+    align-self: center;
+    padding-right: 20px;
 }
 .nav1 a{
 font-size: 20px;
-padding-left: 10px;
+margin: 20px;
 
 }
 
@@ -81,7 +76,14 @@ height: 45px;
 border-radius: 50px;
 
 }
-.homebody{
+.home{
+   
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+}
+.homebody , .article{
     display: flex;
     flex-direction: row;
     margin: 0;
@@ -90,7 +92,7 @@ border-radius: 50px;
     padding-left: 150px;
   
 }
-.homebody h1 {
+.homebody h1, .article_title{
     font-size: 70px;
     padding: 0;
     margin: 0;
@@ -107,12 +109,19 @@ border-radius: 50px;
     width: 45%;
     height: auto;
     display: inline;
+    border-radius: 20%;
     
 }
-.sidenav{
-    display: flex;
-    justify-content: flex-end;
-    align-self: center;
+body .sidenav, html .sidenav{
+    background: 0 0;
+    border: none;
+    outline: 0;
+    position: fixed;
+    margin: 50px;
+    padding-top: 50px;
+    cursor: pointer;
+    scroll-behavior: smooth;   
+
 }
 .sidenav ul {
 
@@ -129,15 +138,17 @@ border-radius: 50px;
     background-color: grey;
     border: 1px solid darkgray;
     margin: 40px;
-    opacity: 70%;
-    
+    opacity: 50%;
+    scroll-behavior: smooth;
 }
 
 .sidenav li:hover{
     background-color: darkgrey;
+    border: 2px solid lightgreen;
     opacity: 100%;
+    transform: 1px;
 }
-.sidenav li.active:before {
+.sidenav li.active {
     background: #f64d28;
     opacity: 1;
 }
@@ -149,4 +160,55 @@ border-radius: 50px;
     color: grey;
  
 }
+.article_title{
+    margin-left: 50px;
+    font-stretch: expanded;
+    box-sizing: border-box;
+    padding: 50px;
+    padding-left: 90px;
+    justify-content: center;
+}
+
+.article_content {
+    flex-wrap: wrap;
+    justify-self: center;
+    padding-left: 120px;
+    padding-right: 120px;
+    width: 80%;
+    margin-left: 50px;
+}
+.article_content p{
+  justify-self: flex-start;
+    font-size: 20px;
+   
+    letter-spacing: 5px;
+    line-height: 1.8;
+}
+.aboutme a {
+    color: white;
+    text-decoration: none !important;
+}
+.header a {
+    color: grey;
+    text-decoration: none !important;
+}
+
+.resume h3{
+    vertical-align: middle;
+    align-self: center;
     
+}
+.resume {
+    padding: 20px;
+}
+.resume h3:hover{
+    text-decoration: underline;
+}
+.resume img{
+    width: 35px;
+    height: auto;
+   
+}
+.technologist {
+    background-image: url(images/female-technologist.png);
+}
