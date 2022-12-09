@@ -76,6 +76,7 @@ height: 45px;
 border-radius: 50px;
 
 }
+
 .home{
    
     display: flex;
@@ -132,26 +133,25 @@ body .sidenav, html .sidenav{
 }
 .sidenav li {
     box-sizing: border-box;
-    width: 60px;
-    height: 15px;
+    width: 80px;
+    height: 20px;
     border-radius: 10px;
     text-decoration: none !important;
     background-color: grey;
     border: 1px solid darkgray;
-    margin: 40px;
+    margin: 60px;
     opacity: 50%;
     scroll-behavior: smooth;
 }
 
 .sidenav li:hover{
-    background-color: darkgrey;
-    border: 2px solid lightgreen;
+    background-color: lightgreen;
+    border: 2px solid lightgray;
     opacity: 100%;
     transform: 1px;
 }
-.sidenav li:active {
+.sidenav li .sidenavline:active {
     background-color: lightgreen;
-    
 }
 
 .sidenavline {
@@ -172,19 +172,19 @@ body .sidenav, html .sidenav{
 }
 
 .article_content {
-    flex-wrap: wrap;
-    justify-self: center;
-    padding-left: 120px;
-    padding-right: 120px;
-    width: 80%;
+    width: 70%;
     margin-left: 50px;
+   
+    display: flex;
+    align-self: center;
+    margin-left: 300px;
 }
 .article_content p{
-  justify-self: flex-start;
+    justify-content: flex-start;
     font-size: 20px;
-    letter-spacing: 5px;
+    letter-spacing: 4px;
     line-height: 1.8;
-    color: white;
+    color: lightgray;
 }
 .aboutme a {
     color: white;
@@ -205,13 +205,25 @@ body .sidenav, html .sidenav{
     padding: 20px;
     margin-bottom: 100px;
 }
+.resume a {
+    box-sizing: border-box;
+    border: 1px solid lightgreen;
+    padding: 20px;
+    vertical-align: middle;
+    justify-content: center;
+    margin-top: 10px;
+}
+.resume a img {
+   padding: 0;
+   vertical-align: middle;
+}
 .resume h3:hover{
     text-decoration: underline;
 }
-.resume img{
+.resume img , .links img{
     width: 35px;
     height: auto;
-   
+   vertical-align: middle;
 }
 .technologist {
     background-image: url(images/female-technologist.png);
@@ -226,7 +238,7 @@ body .sidenav, html .sidenav{
 .work .article_title{
     padding-right: 250px;
 }
-.work a {
+.work a , .links a{
    
     text-decoration: none !important;
     color: white;
@@ -237,7 +249,7 @@ table {
     padding-right: 50px;
     margin: 50px;
     margin-right: 20px;
-    color: white;
+    color: lightgray;
     font-size: 18px;
    
 }
@@ -247,4 +259,21 @@ tr {
 .mainrow{
     width: 300px;
     padding-left: 50px;
+}
+.links  {
+    box-sizing: border-box;
+    border: 1px solid lightgreen;
+    padding: 20px;
+    margin: 50px;
+    margin-bottom: 20px;
+    vertical-align: middle;
+    justify-content: center;
+    margin-top: 10px;
+    width: 400px;
+}
+.mylinks .article_content {
+    
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
 }
