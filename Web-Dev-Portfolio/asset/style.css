@@ -217,9 +217,7 @@ body .sidenav, html .sidenav{
    padding: 0;
    vertical-align: middle;
 }
-.resume h3:hover{
-    text-decoration: underline;
-}
+
 .resume img , .links img{
     width: 35px;
     height: auto;
@@ -247,7 +245,7 @@ table {
     width: 100%;
     vertical-align: center;
     padding-right: 50px;
-    margin: 50px;
+    margin: 20px;
     margin-right: 20px;
     color: lightgray;
     font-size: 18px;
@@ -271,9 +269,28 @@ tr {
     margin-top: 10px;
     width: 400px;
 }
+.links:hover{
+    background-color: lightgreen;
+}
+.mylinks .links a:hover{
+    color: black;
+}
 .mylinks .article_content {
     
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 50px;
+    
 }
+
+.footerdiv {
+    color: lightgray;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 14px;
+    clear: both;
+  }
+  
+  .footerdiv a {
+    color: inherit;
+    text-decoration: underline;
+  }
