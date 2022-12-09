@@ -13,13 +13,6 @@ body, html {
    display: grid;
     grid-template: 10% / 100%; 
    padding: 20px;
-     /* grid-template-areas: 
-    "header nav"
-    "sidenav home"
-    "aboutme"
-    "myhobby sidenav"
-    "mylinks mylinks"
-    "footer footer";  */
 }
 
 
@@ -38,7 +31,6 @@ body, html {
     justify-content: space-between;
     align-self: center;
     padding-left: 50px;
-   
     margin-top: 10px;
 }
 .nav{
@@ -125,12 +117,13 @@ body .sidenav, html .sidenav{
     scroll-behavior: smooth;   
 
 }
-.sidenav ul {
+.sidenav ul , .skillsdiv ul{
 
         list-style-type: none;
         padding-left: 0px;
       
 }
+
 .sidenav li {
     box-sizing: border-box;
     width: 80px;
@@ -174,10 +167,12 @@ body .sidenav, html .sidenav{
 .article_content {
     width: 70%;
     margin-left: 50px;
-   
+   /* border: 1px solid; */
     display: flex;
     align-self: center;
     margin-left: 300px;
+    display: flex;
+    flex-wrap: wrap;
 }
 .article_content p{
     justify-content: flex-start;
@@ -185,6 +180,7 @@ body .sidenav, html .sidenav{
     letter-spacing: 4px;
     line-height: 1.8;
     color: lightgray;
+    text-align: justify;
 }
 .aboutme a {
     color: white;
@@ -204,6 +200,11 @@ body .sidenav, html .sidenav{
 .resume {
     padding: 20px;
     margin-bottom: 100px;
+    margin-left:80px ;
+}
+.resume a:hover{
+    background-color: white;
+    color: green;
 }
 .resume a {
     box-sizing: border-box;
@@ -212,13 +213,14 @@ body .sidenav, html .sidenav{
     vertical-align: middle;
     justify-content: center;
     margin-top: 10px;
+    font-size: 18px;
 }
 .resume a img {
    padding: 0;
    vertical-align: middle;
 }
 
-.resume img , .links img{
+.resume img , .links img , .skillsdiv img{
     width: 35px;
     height: auto;
    vertical-align: middle;
@@ -271,6 +273,8 @@ tr {
 }
 .links:hover{
     background-color: lightgreen;
+    border: 3px solid white;
+    color: black;
 }
 .mylinks .links a:hover{
     color: black;
@@ -281,6 +285,7 @@ tr {
     flex-wrap: wrap;
     
 }
+
 
 .footerdiv {
     color: lightgray;
@@ -294,3 +299,45 @@ tr {
     color: inherit;
     text-decoration: underline;
   }
+  .skills .article_content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0px;
+    padding-bottom: 50px;
+  }
+  .skillsdiv{
+    border: 1px solid lightgreen;
+    margin: 10px;
+    width: 350px;
+    justify-self: center;
+  }
+  .skillsdiv ul{
+    box-sizing: border-box;
+    justify-content: flex-start;
+
+  }
+  .skills .article_title{
+    padding-bottom: 0 ;
+    padding-top: 0;
+  
+  }
+.skillsdiv h3{
+    font-size: 25px;
+    padding: 0;
+    border: 1px solid lightgreen;
+    margin-top: 0;
+}
+.skillsdiv li{
+    text-decoration: none !important;
+    text-align: left;
+    color: lightgray;
+    vertical-align: middle;
+    margin: 10px;
+    padding-left: 20px;
+}
+.skillsdiv:hover{
+  
+   border: 3px solid lightgreen;
+ 
+}
