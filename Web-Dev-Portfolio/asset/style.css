@@ -116,6 +116,7 @@ body .sidenav, html .sidenav{
     position: fixed;
     margin: 50px;
     padding-top: 50px;
+    padding-bottom: 50px;
     cursor: pointer;
     scroll-behavior: smooth;   
 
@@ -164,7 +165,7 @@ body .sidenav, html .sidenav{
     font-stretch: expanded;
     box-sizing: border-box;
     padding: 50px;
-    padding-left: 90px;
+   
     justify-content: center;
 }
 
@@ -213,7 +214,7 @@ box-sizing: border-box;
 .resume {
     padding: 20px;
     margin-bottom: 100px;
-    margin-left:80px ;
+    
 }
 .resume a:hover{
     background-color: white;
@@ -259,30 +260,38 @@ box-sizing: border-box;
 table {
     
     align-self: center;
-    width: 80%;
-   
-    padding-right: 50px;
+    width: 60%;
+   /* border: 2px solid red; */
     margin: 20px;
-    margin-right: 20px;
-    color: lightgray;
     font-size: 18px;
     margin-top: 0;
-    color: white;
- 
+    vertical-align: text-top;
+}
+table .companycol {
+    width: 130px;
 }
 table th {
-    font-size: 25px;
+    font-size: 22px;
+    width: auto;
+    color: white;
+    word-wrap: break-word;
+    vertical-align: top;
+    padding-left: 0;
 }
-table .mincol {
+table td{
+    color: lightgray;
+    vertical-align: text-top;
+}
+/* table .mincol {
     width: 70px;
-}
+} */
 tr {
     height: 80px;
+    margin: 10px;
 }
 .mainrow{
-    width: 300px;
-    padding-left: 100px;
-    text-align: left;
+    width: 200px;
+    
 
 }
 .links  {
@@ -305,7 +314,7 @@ tr {
     color: black;
 }
 .mylinks .article_content {
-    width: 60%;
+    width: 70%;
     display: flex;
     flex-wrap: wrap;
     
@@ -318,7 +327,7 @@ tr {
     text-align: center;
     font-size: 14px;
     clear: both;
-    padding-left: 50px;
+
   }
   
   .footerdiv a {
@@ -367,4 +376,155 @@ tr {
   
    border: 3px solid lightgreen;
  
+}
+
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+    .media {
+      width: 100%;
+    }
+  }
+  
+@media only screen and (max-width: 768px) {
+    .media {
+      width: 100%;
+      text-align: center;
+  
+    }
+    .article_title {
+        font-size: 40px;
+    }
+    .article_content p {
+        font-size: 15px;
+    
+    }
+    .sidenav li{
+        width: 60px;
+        height: 20px;
+       
+    }
+    .snav .sidenav {
+        margin: 0;
+    }
+    table {
+        width: 70%;
+      }
+    table td {
+        font-size: 13px;
+        
+    }
+    table th {
+        font-size: 18px;
+    }
+    .links{
+        width: 200px;
+    }
+}
+@media only screen and (max-width: 425px) {
+    .media {
+        width: 100%;
+        text-align: center;
+    
+      }
+      .sidenav li {
+        width: 35px;
+      }
+      .image-container img {
+        width: 60%
+      }
+      .header {
+        padding-left: 0;
+        padding-top: 10px;
+      }
+      .header h2 {
+        font-size: 0px;
+      }
+      .home b, h1, .homebody p {
+        font-size: 40px;
+      }
+      .resume h3{
+        font-size: 15px;
+      }
+      .article_title{
+        padding-left: 0px;
+        margin-left: 0;
+        padding: 20px;
+        font-size: 30px;
+      }
+      .article_content, .skills .article_content{
+        width: 80%;
+      }
+      .background {
+        margin-top: 20px;}
+      .skills .article_content{
+        margin: 10px;
+        margin-bottom: 50px;
+      }
+      .article_content p {
+        font-size: 12px;
+      }
+      .sidenav li {
+        padding: 0px;
+       margin-bottom: 20px;
+      }
+      
+      
+      .skillsdiv{
+        width: 130px;
+        margin-top: 20px;
+        margin-bottom: 3px;
+      }
+      .skillsdiv li{
+        padding-left: 0;
+        margin: 5px;
+        font: 9px;
+      }
+      .skillsdiv h3{
+        font-size: 13px;
+        padding: 0;
+        margin-top: 0;
+    }
+    .skillsdiv img, .links img{
+        width:20px ;
+    }
+    table {
+        width: 80%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+      table .companycol{
+        width: 70px;
+      }
+    table th {
+        font-size: 12px;
+        justify-self: left; 
+        width: auto;
+    }
+    table td, th, tr{
+        margin: 20px;
+    }
+  
+      table td {
+        font-size: 12px;
+        
+      }
+      .links{
+        width: 100px;
+        padding: 0;
+      }
+      .links h3 {
+        font-size: 12px;
+      }
+      
+
+      .mylinks .article_content {
+        width: 80%;
+        margin-top: 40px;
+      }
+      .contact{
+        margin-top: 20px;
+        margin-bottom: 100px;
+      }
+     
+
+    
 }
