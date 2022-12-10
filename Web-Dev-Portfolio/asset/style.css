@@ -1,7 +1,7 @@
 body, html {
     margin: 0;
     padding: 0;
-  background-color: black;
+    background: linear-gradient(to left, rgb(11, 15, 82) ,rgb(116, 8, 8));
     color: white;
     /*font-family: Apercu,Source Sans Pro,Helvetica,Arial,sans-serif;*/
     line-height: 1.5;
@@ -95,7 +95,7 @@ border-radius: 50px;
     color: white;
 }
 .homebody p{
-    color: grey;
+    color: lightgray;
     font-size: 50px;
     padding: 0;
     margin: 0;
@@ -134,11 +134,11 @@ body .sidenav, html .sidenav{
     height: 20px;
     border-radius: 10px;
     text-decoration: none !important;
-    background-color: grey;
+    background-color: lightgray;
     border: 1px solid darkgray;
     margin: 60px;
     margin-left: 0;
-    opacity: 50%;
+    opacity: 30%;
     scroll-behavior: smooth;
 }
 
@@ -202,7 +202,7 @@ box-sizing: border-box;
 }
 
 .header a {
-    color: grey;
+    color:lightgray;
     text-decoration: none !important;
 }
 
@@ -319,7 +319,6 @@ tr {
     flex-wrap: wrap;
     
 }
-
 
 .footerdiv {
     color: lightgray;
@@ -525,6 +524,14 @@ tr {
         margin-bottom: 100px;
       }
      
-
-    
 }
+/* @keyframes animate {
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-300) rotate(360deg);
+        opacity: 1;
+    }
+} */
