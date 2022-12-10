@@ -1,7 +1,7 @@
 body, html {
     margin: 0;
     padding: 0;
-    background: linear-gradient(to left, rgb(11, 15, 82) ,rgb(116, 8, 8));
+    background: linear-gradient(to left, rgb(6, 9, 75) ,rgb(116, 8, 8));
     color: white;
     /*font-family: Apercu,Source Sans Pro,Helvetica,Arial,sans-serif;*/
     line-height: 1.5;
@@ -69,12 +69,15 @@ border-radius: 50px;
 
 }
 
-.home{
+.home, .homeplay{
    
     display: flex;
     justify-content: center;
-    padding-bottom: 50px;
 
+
+}
+.home{
+    padding-bottom: 50px;
 }
 
 .homebody , .article {
@@ -87,6 +90,47 @@ border-radius: 50px;
     align-self: center;
     
    
+}
+.daily {
+    display: flex;
+    
+    align-self: center;
+    align-content: center;
+    justify-content: center;
+}
+.mypost {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    align-self: center;
+    align-content: center;
+    justify-content: center;
+}
+.instagram-media{
+    background:linear-gradient(to left,  rgb(0, 0, 0,0),lightgray, lightgray,lightgray); 
+    border:0; 
+    border-radius:3px; 
+    box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); 
+    width: 400px;
+    height: auto;
+    margin: 40px;
+    
+}
+figure img {
+    vertical-align: middle;
+    justify-content: center;
+    width: 100%;  
+    margin-bottom: 10px;
+}
+.instagram-media:hover {
+    border: 2px solid lightgreen;
+}
+figcaption{
+    font-size: 15px;
+    color: black;
+}
+figure h4 {
+    font-size: 10px;
 }
 .homebody h1, .article_title{
     font-size: 70px;
@@ -419,6 +463,12 @@ tr {
     }
 }
 @media only screen and (max-width: 425px) {
+    .mypost{
+        width: 90%;
+    }
+    .instagram-media {
+        width: 100%;
+    }
     .media {
         width: 100%;
         text-align: center;
@@ -437,7 +487,7 @@ tr {
       .header h2 {
         font-size: 0px;
       }
-      .home b, h1, .homebody p {
+      .home b, h1, .homebody p, .homeplay b , .homeplay h1 {
         font-size: 40px;
       }
       .resume h3{
