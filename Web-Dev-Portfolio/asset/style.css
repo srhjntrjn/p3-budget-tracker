@@ -47,8 +47,9 @@ margin: 20px;
 
 }
 
-.logo h2{
+.logo h1{
     vertical-align: middle;
+    font-size: 25px;
    
 }
 body a:hover{
@@ -110,20 +111,61 @@ border-radius: 50px;
     background:linear-gradient(to left,  rgb(0, 0, 0,0),lightgray, lightgray,lightgray); 
     border:0; 
     border-radius:3px; 
-    box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); 
+    box-shadow:0 0 10px 0 rgba(175, 165, 165, 0.5),0 1px 10px 0 rgba(148, 143, 143, 0.15); 
     width: 400px;
     height: auto;
     margin: 40px;
+    display: flex;
+    justify-content: space-evenly;
     
+}
+/* .boxinsta{
+    width: 320px;
+    height: 230px;  
+   
+    background-image: url('../images/blog/malamawi.png');
+
+    background-size: 100%;
+    animation: slider 20s infinite linear 0s;
+
+
+}
+.boxcon{
+    width: 100%;
+    display: flex;
+    animation: slide 16s infinite;
+}
+.boxcon img{
+    width: 100%;
+} */
+body #top-button, html #top-button {
+    background: 0 0;
+    border: none;
+    outline: 0;
+    width: 55px;
+    position: fixed;
+    bottom: 25px;
+    right: 10px;
+    cursor: pointer;
+    display: none;
+    scroll-behavior: smooth; 
+    display: inline-block;
+}
+
+body #top-button img, html #top-button img {
+    width: 100%;
+    scroll-behavior: smooth;
 }
 figure img {
     vertical-align: middle;
     justify-content: center;
     width: 100%;  
     margin-bottom: 10px;
+
 }
 .instagram-media:hover {
-    border: 2px solid lightgreen;
+    border: 2px solid white;
+   
 }
 figcaption{
     font-size: 15px;
@@ -132,7 +174,7 @@ figcaption{
 figure h4 {
     font-size: 10px;
 }
-.homebody h1, .article_title{
+.homebody h2, .article_title{
     font-size: 70px;
     padding: 0;
     margin: 0;
@@ -151,6 +193,7 @@ figure h4 {
     height: auto;
     display: inline;
     border-radius: 20%;
+    opacity: 70%;
     
 }
 body .sidenav, html .sidenav{
@@ -363,6 +406,9 @@ tr {
     flex-wrap: wrap;
     
 }
+.mylinks .article_title {
+    margin-bottom: 50px;
+}
 
 .footerdiv {
     color: lightgray;
@@ -370,7 +416,7 @@ tr {
     text-align: center;
     font-size: 14px;
     clear: both;
-
+    margin-top: 100px;
   }
   
   .footerdiv a {
@@ -420,6 +466,50 @@ tr {
    border: 3px solid lightgreen;
  
 }
+.instagram-media button{
+    padding: 5px;
+    border: none;
+    background: #37f;
+    font-size: 30px;
+    color: red;
+    width: 45px;
+    height: 35px;
+    vertical-align: middle;
+    align-self: center;
+    
+}
+.instagram-media button .next {
+    border-radius: 10px 0 0 10px;
+    margin-left: 15px;
+}
+.instagram-media button .prew {
+    border-radius: 0 10px 10px 0;
+    margin: 10px;
+    
+}
+.next:hover , .prew:hover{
+    color: black;
+}
+
+@keyframes slider {
+    
+    0%{ background-image: url("../images/blog/malamawi.png");   vertical-align: middle;
+        justify-content: center;
+        width: 100%;  }
+    45%{ background-image: url("../images/blog/cotabato.png");   vertical-align: middle;
+        justify-content: center;
+        width: 100%;  }
+    75%{ background-image: url("../images/blog/batangas.png");   vertical-align: middle;
+        justify-content: center;
+        width: 100%;  }
+}
+
+
+
+
+
+
+
 
 @media only screen and (min-width: 769px) and (max-width: 991px) {
     .media {
@@ -484,10 +574,10 @@ tr {
         padding-left: 0;
         padding-top: 10px;
       }
-      .header h2 {
+      .header h1 {
         font-size: 0px;
       }
-      .home b, h1, .homebody p, .homeplay b , .homeplay h1 {
+      .home b, h2, .homebody p, .homeplay b , .homeplay h1 {
         font-size: 40px;
       }
       .resume h3{
@@ -573,6 +663,10 @@ tr {
         margin-top: 20px;
         margin-bottom: 100px;
       }
+      .mylinks .article_title {
+        margin-bottom: 0px;
+    }
+    
      
 }
 /* @keyframes animate {
