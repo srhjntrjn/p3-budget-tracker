@@ -119,25 +119,7 @@ border-radius: 50px;
     justify-content: space-evenly;
     
 }
-/* .boxinsta{
-    width: 320px;
-    height: 230px;  
-   
-    background-image: url('../images/blog/malamawi.png');
 
-    background-size: 100%;
-    animation: slider 20s infinite linear 0s;
-
-
-}
-.boxcon{
-    width: 100%;
-    display: flex;
-    animation: slide 16s infinite;
-}
-.boxcon img{
-    width: 100%;
-} */
 body #top-button, html #top-button {
     background: 0 0;
     border: none;
@@ -491,19 +473,6 @@ tr {
     color: black;
 }
 
-@keyframes slider {
-    
-    0%{ background-image: url("../images/blog/malamawi.png");   vertical-align: middle;
-        justify-content: center;
-        width: 100%;  }
-    45%{ background-image: url("../images/blog/cotabato.png");   vertical-align: middle;
-        justify-content: center;
-        width: 100%;  }
-    75%{ background-image: url("../images/blog/batangas.png");   vertical-align: middle;
-        justify-content: center;
-        width: 100%;  }
-}
-
 
 
 
@@ -669,13 +638,3 @@ tr {
     
      
 }
-/* @keyframes animate {
-    0%{
-        transform: translateY(0) rotate(0deg);
-        opacity: 1;
-    }
-    100%{
-        transform: translateY(-300) rotate(360deg);
-        opacity: 1;
-    }
-} */
