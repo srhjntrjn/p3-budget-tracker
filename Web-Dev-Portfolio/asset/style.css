@@ -1,7 +1,7 @@
 body, html {
     margin: 0;
     padding: 0;
-    background: linear-gradient(to left, rgb(6, 9, 75) ,rgb(116, 8, 8));
+    background: linear-gradient(to left, rgb(6, 9, 75) ,rgb(15, 0, 71));
     color: white;
     /*font-family: Apercu,Source Sans Pro,Helvetica,Arial,sans-serif;*/
     line-height: 1.5;
@@ -108,9 +108,9 @@ border-radius: 50px;
     justify-content: center;
 }
 .instagram-media{
-    background:linear-gradient(to left,  rgb(0, 0, 0,0),lightgray, lightgray,lightgray); 
+    background:linear-gradient(to left,lightgray, lightgray,lightgray); 
     border:0; 
-    border-radius:3px; 
+    border-radius:10px; 
     box-shadow:0 0 10px 0 rgba(175, 165, 165, 0.5),0 1px 10px 0 rgba(148, 143, 143, 0.15); 
     width: 400px;
     height: auto;
@@ -146,7 +146,8 @@ figure img {
 
 }
 .instagram-media:hover {
-    border: 2px solid white;
+    border: 3px solid white;
+    box-shadow:0 0 10px 0 rgba(175, 165, 165, 0.5),0 1px 10px 0 rgba(148, 143, 143, 0.15); 
    
 }
 figcaption{
@@ -365,7 +366,9 @@ tr {
 }
 .links  {
     box-sizing: border-box;
-    border: 1px solid lightgreen;
+    border: 1px solid gray;
+    border-radius: 10px;
+    box-shadow:0 0 10px 0 rgba(175, 165, 165, 0.5),0 1px 10px 0 rgba(148, 143, 143, 0.15); 
     padding: 20px;
     margin: 20px;
     margin-bottom: 20px;
@@ -375,12 +378,12 @@ tr {
     width: 300px;
 }
 .links:hover{
-    background-color: lightgreen;
-    border: 3px solid white;
-    color: black;
+   
+    border: 3px solid whitesmoke;
+    color: white;
 }
 .mylinks .links a:hover{
-    color: black;
+    color: white;
 }
 .mylinks .article_content {
     width: 70%;
@@ -414,10 +417,12 @@ tr {
     padding-bottom: 50px;
   }
   .skillsdiv{
-    border: 1px solid lightgreen;
+    border: 1px solid rgb(177, 171, 171);
+    border-radius: 10px;
     margin: 10px;
     width: 350px;
     justify-self: center;
+    box-shadow:0 0 10px 0 rgba(175, 165, 165, 0.5),0 1px 10px 0 rgba(148, 143, 143, 0.15); 
   }
   .skillsdiv ul{
     box-sizing: border-box;
@@ -432,8 +437,9 @@ tr {
 .skillsdiv h3{
     font-size: 25px;
     padding: 0;
-    border: 1px solid lightgreen;
+    border: 1px solid white;
     margin-top: 0;
+    border-radius: 5px;
 }
 .skillsdiv li{
     text-decoration: none !important;
@@ -445,32 +451,8 @@ tr {
 }
 .skillsdiv:hover{
   
-   border: 3px solid lightgreen;
+   border: 3px solid white;
  
-}
-.instagram-media button{
-    padding: 5px;
-    border: none;
-    background: #37f;
-    font-size: 30px;
-    color: red;
-    width: 45px;
-    height: 35px;
-    vertical-align: middle;
-    align-self: center;
-    
-}
-.instagram-media button .next {
-    border-radius: 10px 0 0 10px;
-    margin-left: 15px;
-}
-.instagram-media button .prew {
-    border-radius: 0 10px 10px 0;
-    margin: 10px;
-    
-}
-.next:hover , .prew:hover{
-    color: black;
 }
 
 
@@ -533,9 +515,7 @@ tr {
         text-align: center;
     
       }
-      .sidenav li {
-        width: 35px;
-      }
+    
       .image-container img {
         width: 60%
       }
@@ -571,10 +551,15 @@ tr {
         font-size: 12px;
       }
       .sidenav li {
+        width: 35px;
         padding: 0px;
-       margin-bottom: 20px;
+        margin-top: 0;
+       margin-bottom: 40px;
       }
-      
+      .sidenav ul {
+        margin-bottom: 10px;
+        margin-top: 50px;
+      }
       
       .skillsdiv{
         width: 130px;
