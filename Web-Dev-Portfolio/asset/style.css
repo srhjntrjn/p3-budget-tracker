@@ -376,6 +376,7 @@ tr {
     justify-content: center;
     margin-top: 10px;
     width: 300px;
+
 }
 .links:hover{
    
@@ -384,6 +385,7 @@ tr {
 }
 .mylinks .links a:hover{
     color: white;
+    text-decoration: underline;
 }
 .mylinks .article_content {
     width: 70%;
