@@ -184,14 +184,16 @@ body .sidenav, html .sidenav{
     border: none;
     outline: 0;
     position: fixed;
-    margin: 50px;
+    margin: 60px;
+    margin-bottom: 30px;
+    margin-left: 0;
     padding-top: 50px;
     padding-bottom: 50px;
     cursor: pointer;
     scroll-behavior: smooth;   
 
 }
-.sidenav ul , .skillsdiv ul{
+.sidenav ul , .skills-div ul{
 
         list-style-type: none;
         padding-left: 0px;
@@ -200,36 +202,46 @@ body .sidenav, html .sidenav{
 
 .sidenav li {
     box-sizing: border-box;
-    width: 80px;
-    height: 20px;
+    width: 120px;
+    height: 30px;
     border-radius: 10px;
     text-decoration: none !important;
-    background-color: lightgray;
-    border: 1px solid darkgray;
-    margin: 60px;
+    background-color: white;
+    border: 1px solid ;
+    color: black;
+    font: 15px;
+   margin: 50px;
     margin-left: 0;
-    opacity: 30%;
     scroll-behavior: smooth;
+}
+.sidenav a{
+    color: black;
+    font-size: 15px;
+
 }
 
 .sidenav li:hover{
     background-color: lightgreen;
-    border: 2px solid lightgray;
+    border: 2px solid black;
     opacity: 100%;
-    transform: 1px;
+    opacity: 50%;
 }
 .sidenav li .sidenavline:active {
     background-color: lightgreen;
-}
+    color:black;
+    opacity: 50%;
 
+}
+/* 
 .sidenavline {
     box-sizing: border-box;
     width: 20px;
     height: 10px;
     text-decoration: none !important;
-    color: grey;
- 
-}
+    color: white;
+    font-size: 18px;
+
+} */
 .article_title{
     margin-left: 50px;
     font-stretch: expanded;
@@ -304,15 +316,17 @@ box-sizing: border-box;
    vertical-align: middle;
 }
 
-.resume img , .links img , .skillsdiv img{
+.resume img , .links img , .skills-div img{
     width: 35px;
-    height: auto;
+    height: 35px;
    vertical-align: middle;
+   display: inline;
 }
+
 .technologist {
     background-image: url(images/female-technologist.png);
 }
-.work{
+#work{
     padding-bottom: 30px;
 }
 .article .work {
@@ -352,6 +366,10 @@ table td{
     color: lightgray;
     vertical-align: text-top;
 }
+table a {
+    color: white;
+    text-decoration: 0 none !important;
+}
 /* table .mincol {
     width: 70px;
 } */
@@ -377,6 +395,16 @@ tr {
     margin-top: 10px;
     width: 300px;
 
+}
+.links h3{
+    margin: 10px;
+}
+.links a{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+   
+    align-items: center;
 }
 .links:hover{
    
@@ -418,7 +446,7 @@ tr {
     margin-top: 0px;
     padding-bottom: 50px;
   }
-  .skillsdiv{
+  .skills-div{
     border: 1px solid rgb(177, 171, 171);
     border-radius: 10px;
     margin: 10px;
@@ -426,7 +454,7 @@ tr {
     justify-self: center;
     box-shadow:0 0 10px 0 rgba(175, 165, 165, 0.5),0 1px 10px 0 rgba(148, 143, 143, 0.15); 
   }
-  .skillsdiv ul{
+  .skills-div ul{
     box-sizing: border-box;
     justify-content: flex-start;
 
@@ -436,14 +464,14 @@ tr {
     padding-top: 0;
   
   }
-.skillsdiv h3{
+.skills-div h3{
     font-size: 25px;
     padding: 0;
     border: 1px solid white;
     margin-top: 0;
     border-radius: 5px;
 }
-.skillsdiv li{
+.skills-div li{
     text-decoration: none !important;
     text-align: left;
     color: lightgray;
@@ -451,7 +479,7 @@ tr {
     margin: 10px;
     padding-left: 20px;
 }
-.skillsdiv:hover{
+.skills-div:hover{
   
    border: 3px solid white;
  
@@ -483,10 +511,19 @@ tr {
         font-size: 15px;
     
     }
+    .homebody p {
+        font-size: 40px;
+    }
     .sidenav li{
-        width: 60px;
-        height: 20px;
+        width: 80px;
+        height: 30px;
+        font-size: 12px;
        
+    }
+    .sidenav a{
+        color: black;
+        font-size: 12px;
+    
     }
     .snav .sidenav {
         margin: 0;
@@ -553,32 +590,39 @@ tr {
         font-size: 12px;
       }
       .sidenav li {
-        width: 35px;
+        width: 70px;
+        height: 20px;
         padding: 0px;
         margin-top: 0;
        margin-bottom: 40px;
+       opacity: 50%;
       }
+      .sidenav a{
+        color: black;
+        font-size: 10px;
+        
+    }
       .sidenav ul {
         margin-bottom: 10px;
         margin-top: 50px;
       }
       
-      .skillsdiv{
+      .skills-div{
         width: 130px;
         margin-top: 20px;
         margin-bottom: 3px;
       }
-      .skillsdiv li{
+      .skills-div li{
         padding-left: 0;
         margin: 5px;
         font: 9px;
       }
-      .skillsdiv h3{
+      .skills-div h3{
         font-size: 13px;
         padding: 0;
         margin-top: 0;
     }
-    .skillsdiv img, .links img{
+    .skills-div img, .links img{
         width:20px ;
     }
     table {
@@ -608,6 +652,7 @@ tr {
       }
       .links h3 {
         font-size: 12px;
+        
       }
       
 
@@ -624,4 +669,33 @@ tr {
     }
     
      
+}
+@media only screen and (max-width: 375px) {
+    .nav1 a {
+        font-size: 15px;
+        margin: 10px;
+    }
+    .aboutme p{
+        text-align: justify;
+        letter-spacing: 2px;
+        width:auto;
+    }
+    .article_content{
+        width: 80%;
+        margin-left: 20px;
+        text-overflow: hidden;
+    }
+    .homebody h2 {
+        font-size: 50px;
+    }
+    .homebody p {
+        font-size: 30px;
+        width: 90%s;
+    }
+    .aboutme h3 a{
+        font-size: 12px;
+    }
+    .skills-div{
+        width: 70%;
+    }
 }
