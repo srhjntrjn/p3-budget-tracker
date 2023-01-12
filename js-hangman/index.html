@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Creepster&family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <title>Hangman</title>
+  </head>
+
+  <body>
+    <div class="grid-container">
+        <div class="header" >
+              <div class="logo"> 
+                <img src="image/hangmanlogo.png" alt="Me">
+                <h1>Letter Penalty</h1>
+              </div>
+        </div>
+        <div class="grid-item mainContent">
+              <div class="btn">
+                  <button class="showModalTip"><img src="image/clue.svg" alt="tip"></button>
+                  <button class="showModalReset"> Reset </button>
+              </div>
+              <div class="btnReset"></div>
+              <div class="modal">
+                  <button class="closeModalTip hidden">&times;</button> 
+                  <p class="tipText">
+                  <img src="image/clue.svg" alt="tip"> You have 11 tries to find the hidden words for Technology category.
+                  </br><strong>TIP </strong>: Try using the popular vowels initially (A,E,I,U)
+                  </p>
+                  <button class="startGame hidden">Start Game</button>
+              </div>
+             
+              <div class="gameOver hidden">
+                <p class="tipText">
+                  <!-- <button class="closeModalTip">&times;</button> -->
+                  <strong> G A M E O V E R!!!!! <br>
+                  The correct word is </strong> <strong class="correctWord"></strong>
+                </p>
+                <button class="playGame">Play Again</button>
+            </div>
+              
+              <div class="modalCongrats hidden">
+                <button class="closeModalTip">&times;</button>
+                <p class="tipText">
+                  <strong> Congratulations!!!! Ang galing mo!!!</strong>
+                  <button class="play">Play Again</button>
+                </p>
+              </div>
+              <div class="btnLevel">
+                  <h2>Choose your Level: </h2>
+                  <button id="Easy">Easy</button>
+                  <button id="Medium">Medium</button>
+                  <button id="Hard">Hard</button>
+              </div>
+              <div id="grid-item pict">
+                <div id="hangman"></div> 
+                <div id="ground"><img src="image/ground.svg" alt=""></div> 
+               </div>
+              <div id="grid-item" class="onGame hidden">
+                <div id="word"></div> 
+                <div id="correct-guesses"></div>
+                <div id="incorrect-guesses"></div>
+                <div id="keyboard"></div>
+              </div>
+              <div id="overlay"></div>
+        </div>
+    </div>
+     <script src="script.js"></script>
+  </body>
+</html>

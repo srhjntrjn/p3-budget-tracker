@@ -1,0 +1,268 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Cambria;
+  font-size: 20px;
+  color: #333;
+  line-height: 1.5;
+  height: 100vh;
+  position: relative;
+  display: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to top left, #9051a8, #02a2aa);
+  font-family: 'Trebuchet MS';
+}
+.mainContent{
+  width: 90%; 
+  margin: auto;
+}
+.mainContent div{
+  margin-left: 10px;
+}
+.header, .header .logo{
+  position: sticky;
+  /* background-color: rgb(49, 78, 158); */
+  font-family: 'Creepster';
+  vertical-align: middle;
+  display: flex;
+  margin: auto;
+  align-self: center;
+  
+}
+.header .logo{
+width: 50%;
+margin:auto;
+
+}
+.header h1{
+  background-color: linear-gradient(to left, rgb(116, 9, 9) ,rgb(3, 1, 12));  
+  color: rgb(90, 2, 2);
+  letter-spacing: 4px;
+}
+.header img{
+  display: inline;
+}
+.logo{
+  padding: 10px;
+}
+.showModalReset{
+font-size: 20px;
+background-color: lightskyblue;
+color: rgb(112, 7, 7);
+width: 100px;
+height: 50px;
+margin-bottom: 20px;
+border-radius: 10px;
+vertical-align: middle;
+}
+.showModalReset:hover{
+  background-color: greenyellow;
+}
+.btn{
+vertical-align: middle;
+padding-top: 10px;
+padding-bottom: 0;
+}
+.showModalTip{
+
+  width: 50px;
+    height: 50px;
+   /* background-image: url('image/clue.svg') ;
+    background-repeat: no-repeat; */
+    background-color: rgb(216, 216, 5);
+    border-radius: 20px;
+}
+.logo img {
+  width: 70px;
+  height: 70px;
+}
+/* .toggleBold {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.75rem 3.5rem;
+  border: none;
+  background-color: #02a2aa;
+  color: #fff;
+  border-radius: 2rem;
+  cursor: pointer;
+  margin: 2rem auto;
+  display: block;
+} */
+.hide{
+  display: none;
+}
+
+.closeModalTip {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+
+p {
+  font-size: 1.8rem;
+}
+
+/* Classes */
+
+.hidden {
+  display: none;
+}
+
+.modal , .modalGOver, .modalCongrats, .gameOver{
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  background-color: white;
+  padding: 3rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  justify-content: center;
+ 
+}
+.modal img{
+  vertical-align: middle;
+}
+.startGame, .restartGame ,.play, .playGame , .restart{
+background-color:lightskyblue ;
+  margin: auto;
+  margin-top: 10px;
+ border-radius: 10px;
+  color: darkblue;
+  font-size: 20px;
+  height: 40px;
+  width: 200px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  display: flex; align-items: center; justify-content: center;
+  border-color: black;
+}
+.modalGOver .tipText, .gameOver{
+margin: auto;
+}
+.restart:hover, .restartGame:hover,.play:hover, .playGame:hover, .startGame:hover{
+  background-color: greenyellow;
+  display: flex; align-items: center; justify-content: center
+}
+
+.tipText {
+  font-style: italic;
+}
+.btnLevel button {
+     width: 130px;
+    height: 40px;
+    font-size: 25px;
+  
+    background-color:lightskyblue;
+    border-radius: 5px;
+    
+    border-color: black;
+}
+.btnLevel button:hover{
+background-color: greenyellow;
+}
+#keyboard button {
+  width: 50px;
+  height: 50px;
+  font-size: 25px;
+
+  background-color:lightskyblue;
+  border-radius: 5px;
+  margin: 6px;
+  border-color: black;
+}
+#keyboar:disabled, #keyboard button:disabled, .btnLevel button:disabled, .btn button:disabled{
+  pointer-events: none;
+}
+
+/* div{
+  border: 1px solid green;
+} */
+#keyboard button:hover {
+ 
+  background-color:greenyellow;
+}
+#correct-guesses{
+font-size: 50px;
+margin-left: 20px;
+color: Red;
+justify-content: bottomcenter;
+}
+#hangman{
+
+justify-self: center;
+width: 200px;
+height: 200px;
+/* background: url('image/ground.svg'); */
+background-repeat: no-repeat;
+background-position: center bottom;
+ 
+    position: relative;
+}
+#ground{
+height: 5px;
+}
+#ground img{
+
+  vertical-align: top;
+
+padding: 0;
+margin: 0;
+
+}
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  pointer-events: none; /* This is for if you want to disable clicking */
+}
+
+
+@media only screen and (max-width: 425px) {
+  .startGame, .restartGame ,.play, .playGame , .restart{
+    margin: auto;
+    margin-top: 10px;
+   border-radius: 10px;
+    color: darkblue;
+    font-size: 15px;
+    height: 50px;
+    width: 100px;
+    
+  }
+
+  .modal , .modalGOver, .modalCongrats, .gameOver{
+    width: 70%;
+  } 
+  .btnLevel button {
+  width: 80px;
+   height: 40px;
+   font-size: 15px;
+ 
+}
+}
