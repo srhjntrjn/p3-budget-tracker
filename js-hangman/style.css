@@ -26,6 +26,9 @@ body {
 .mainContent{
   width: 90%; 
   margin: auto;
+  justify-content: center;
+  align-items: center;
+  
 }
 .mainContent div{
   margin-left: 10px;
@@ -66,7 +69,7 @@ margin-bottom: 20px;
 border-radius: 10px;
 vertical-align: middle;
 }
-.showModalReset:hover{
+.showModalReset:hover, .showModalTip:hover{
   background-color: greenyellow;
 }
 .btn{
@@ -138,6 +141,7 @@ p {
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   z-index: 10;
   justify-content: center;
+  
  
 }
 .modal img{
@@ -239,7 +243,7 @@ margin: 0;
   bottom: 0;
   margin: 0;
   background-color: rgba(0,0,0,0.5); /* Black background with opacity */
-  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  z-index: 1; /* Specify a stack order in case you're using a different order for other elements */
   pointer-events: none; /* This is for if you want to disable clicking */
 }
 
