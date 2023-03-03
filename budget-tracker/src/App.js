@@ -1,11 +1,18 @@
-import React, { useState } from "react";
+import React, {useState, useEffect, useRef } from "react";
+import "./App.css";
+import { Pie } from 'react-chartjs-2';
+import Chart from 'chart.js/auto';
+//import 'chart.js/dist/chart.css';
 
 function BudgetTracker() {
   const [expenses, setExpenses] = useState([]);
   const [categories, setCategories] = useState([
-    "groceries",
-    "rent",
-    "entertainment",
+    "Food",
+    "Groceries",
+    "Rent",
+    "Bills",
+    "Entertainment",
+    "Health/Medication",
   ]);
 
   const [budget, setBudget] = useState(0);
@@ -15,10 +22,11 @@ function BudgetTracker() {
   const [newAmount, setNewAmount] = useState(0);
   const [newDate, setNewDate] = useState(new Date().toISOString().slice(0, 10));
 
-  // set budget by weekly
-  const [budgetPeriod] = useState("week");
+  // // set budget by weekly
+  // const [budgetPeriod] = useState("week");
 
   // add a new expense to the list of expenses
+  
   const handleAddExpense = () => {
     if (!newExpense || !newCategory || newAmount <= 0 || !newDate || !categories.includes(newCategory)) {
       alert("Please fill in all fields with valid values.");
@@ -69,11 +77,20 @@ function BudgetTracker() {
     return categories.map((category, index) => (
       <div key={index}>
         <span>{category}: </span>
-        <span>{getTotalForCategory(category)}</span>
+        <span> P {getTotalForCategory(category)}</span>
       </div>
     ));
   };
-
+  //reset budget button
+  const resetBudget=() => {
+    // let strconfirm = alert("Are you sure you want to delete?");
+    // if (strconfirm === true) {
+      setBudget(0);
+      setExpenses([]);
+      const newExpenseItem = [];
+    // }
+    
+  };
   // check if user has no money left
   const checkBudget = () => {
     if (getAmountLeftToSpend() < 0) {
@@ -85,10 +102,53 @@ function BudgetTracker() {
     }
   };
 
+  //creacting pie chart
+  const myExpenses =  getTotalExpenses();
+
+  const data = {
+    labels: ["Budget", "Remaining Money"],
+    datasets: [
+      {
+        data: [budget, myExpenses],
+        backgroundColor: ["#36A2EB", "#FFCE56"],
+      },
+    ],
+  };
+
+  // function componentDidMount() {
+  //   const myChart = new Chart(document.getElementById('myChart'), {
+  //     type: 'pie',
+  //     data: {
+  //       labels: ['Total Budget', 'Remaining Budget'],
+  //       datasets: [{
+  //         label: 'Budget',
+  //         data: [budget, remainingMoney],
+  //         backgroundColor: ['#36a2eb', '#ff6384']
+  //       }]
+  //     },
+  //     options: {
+  //       responsive: true,
+  //       maintainAspectRatio: false
+  //     }
+  //   });
+  // };
+  
+
+
+  // const data = {
+  //   labels: ["Budget", "Remaining Money"],
+  //   datasets: [
+  //     {
+  //       data: [budget, remainingMoney],
+  //       backgroundColor: ["#36A2EB", "#FFCE56"],
+  //     },
+  //   ],
+  // };
   return (
-    <div>
+    <>
+    <div className="container">
       <h1>Budget Tracker</h1>
-      <div>
+      <div class="setBudget">
         <label>Budget:</label>
         <input
           type="number"
@@ -102,10 +162,10 @@ function BudgetTracker() {
           }}
           disabled={getTotalExpenses() > 0}
         />
-        <button onClick={() => setBudget(0)}>Reset Budget</button>
+        <button onClick={resetBudget}>Reset Budget</button>
       </div>
-      <div>
-        <label>Expense:</label>
+      <div class="setExpense">
+        <label>Description:</label>
         <input
           type="text"
           value={newExpense}
@@ -114,12 +174,10 @@ function BudgetTracker() {
         <label>Category:</label>
         <select
           value={newCategory}
-          onChange={(e) => setNewCategory(e.target.value)}
+          onChange={ (e) => setNewCategory(e.target.value)}
         >
           {categories.map((category) => (
-            <option key={category} value={category}>
-              {category}
-            </option>
+            <option key={category} value={category}>{category}</option>
           ))}
         </select>
         <label>Amount:</label>
@@ -136,12 +194,12 @@ function BudgetTracker() {
         />
         <button onClick={handleAddExpense}>Add Expense</button>
       </div>
-      <div>
+      <div className="setExpense">
         <h2>Expenses</h2>
         <table>
           <thead>
             <tr>
-              <th>Expense</th>
+              <th>Description</th>
               <th>Category</th>
               <th>Amount</th>
               <th>Date</th>
@@ -152,21 +210,30 @@ function BudgetTracker() {
               <tr key={index}>
                 <td>{expense.expense}</td>
                 <td>{expense.category}</td>
-                <td>${expense.amount}</td>
+                <td>P {expense.amount}</td>
                 <td>{expense.date}</td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
-      <div>
-        <h2>Summary per category</h2>
-        {renderCategorySummary()}
+      <div className="checkBudget">
+        <p>Remaining Budget: P {budget - getTotalExpenses()}</p>
+         {checkBudget()}
       </div>
-      <p>Remaining Budget: {budget - getTotalExpenses()}</p>
-      {checkBudget()}
-            
     </div>
+    
+      <div className="summary">
+        <div className="category">
+          <h2>Summary per category</h2>
+          {renderCategorySummary()}
+        </div>
+        <div className="chart">
+          <Pie data={data} />
+        </div>
+      </div>    
+   
+   </>
   );
           }
           export default BudgetTracker;
