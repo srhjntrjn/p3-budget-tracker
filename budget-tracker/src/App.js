@@ -21,6 +21,7 @@ function BudgetTracker() {
   const [newCategory, setNewCategory] = useState(categories[0]);
   const [newAmount, setNewAmount] = useState(0);
   const [newDate, setNewDate] = useState(new Date().toISOString().slice(0, 10));
+  let catergoryPic='';
 
   // // set budget by weekly
   // const [budgetPeriod] = useState("week");
@@ -114,36 +115,35 @@ function BudgetTracker() {
       },
     ],
   };
-
-  // function componentDidMount() {
-  //   const myChart = new Chart(document.getElementById('myChart'), {
-  //     type: 'pie',
-  //     data: {
-  //       labels: ['Total Budget', 'Remaining Budget'],
-  //       datasets: [{
-  //         label: 'Budget',
-  //         data: [budget, remainingMoney],
-  //         backgroundColor: ['#36a2eb', '#ff6384']
-  //       }]
-  //     },
-  //     options: {
-  //       responsive: true,
-  //       maintainAspectRatio: false
-  //     }
-  //   });
-  // };
   
+  function getPics(props){
+  switch(props){
+    case 'Food':
+      return catergoryPic='./img/food.svg';
+      break;
+    case 'Health/Medication':
+      return catergoryPic='./img/Health.svg';
+      break;
+    case 'Rent':
+        return catergoryPic='./img/rent.svg';
+        break;
+    case 'Entertainment':
+      return catergoryPic='./img/supscription.svg';
+      break;
+    case 'Bills':
+        return catergoryPic='./img/Various.svg';
+        break; 
+    case 'Groceries':
+        return catergoryPic='./img/Socio.svg';
+        break; 
+    default:
+        return catergoryPic='./img/Various.svg';
+ 
+  }
 
 
-  // const data = {
-  //   labels: ["Budget", "Remaining Money"],
-  //   datasets: [
-  //     {
-  //       data: [budget, remainingMoney],
-  //       backgroundColor: ["#36A2EB", "#FFCE56"],
-  //     },
-  //   ],
-  // };
+  }
+
   return (
     <>
     <div className="container">
@@ -207,9 +207,10 @@ function BudgetTracker() {
           </thead>
           <tbody>
             {expenses.map((expense, index) => (
+             
               <tr key={index}>
-                <td>{expense.expense}</td>
-                <td>{expense.category}</td>
+                <td>  {expense.expense} </td>
+                <td><img src={getPics(expense.category)}></img>{expense.category}</td>
                 <td>P {expense.amount}</td>
                 <td>{expense.date}</td>
               </tr>
