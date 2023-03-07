@@ -130,7 +130,7 @@ function BudgetTracker() {
               }}
               disabled={getTotalExpenses() > 0}
             />
-
+            <button onClick={resetBudget} className='reset' ></button>
 
             <div className="setExpense">
               <label>Description:</label>
@@ -139,7 +139,6 @@ function BudgetTracker() {
                 value={newExpense}
                 onChange={(e) => setNewExpense(e.target.value)}
               />
-              <br></br>
               <label>Category:</label>
               <select
                 value={newCategory}
@@ -149,15 +148,12 @@ function BudgetTracker() {
                   <option key={category} value={category}>{category}</option>
                 ))}
               </select>
-
-              <br></br>
               <label>Amount:</label>
               <input
                 type="number"
                 value={newAmount}
                 onChange={(e) => setNewAmount(parseInt(e.target.value))}
               />
-              <br></br>
               <label>Date:</label>
               <input
                 type="date"
@@ -165,55 +161,143 @@ function BudgetTracker() {
                 onChange={(e) => setNewDate(e.target.value)}
               />
               <button onClick={handleAddExpense} className='addButton'></button>
-              <button onClick={resetBudget} className='reset' ></button>
             </div>
           </div>
           <div className="summary">
-            <div className="category">
-              <h2>Summary</h2>
-              {renderCategorySummary()}
-              <p className="totalExpenses">Total Expenses: {formatter.format(getTotalExpenses())} </p>
-            </div>
-            <div className="chart">
-              <Pie data={data} />
-            </div>
-
+          <div className="category">
+            <h2>Summary</h2>
+            {renderCategorySummary()}
+            <p className="totalExpenses">Total Expenses: {formatter.format(getTotalExpenses())} </p>
           </div>
+          <div className="chart">
+            <Pie data={data} />
+          </div>
+        
+        </div>
         </div>
 
-
+        
         <div className="Expenses">
-          <h2>Expenses</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Description</th>
-                <th>Category</th>
-                <th>Amount</th>
-                <th>Date</th>
-              </tr>
-            </thead>
-            <tbody>
-              {expenses.map((expense, index) => (
+            <h2>Expenses</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Description</th>
+                  <th>Category</th>
+                  <th>Amount</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                {expenses.map((expense, index) => (
 
-                <TableExpense
-                  expense={expense}
-                  indes={index}
-                  formatter={formatter}
-                />
+                  <TableExpense
+                    expense={expense}
+                    indes={index}
+                    formatter={formatter}
+                  />
 
+                ))}
+              </tbody>
+            </table>
+            <div className="checkBudget">
+
+            <p className="remainingMoney">Remaining Money: {formatter.format(budget - getTotalExpenses())}</p>
+            {checkBudget()}
+          </div>
+          </div>
+          
+      </div>
+      {/* <div className="container">
+          
+          <div className="setBudget">
+            <label>Budget:</label>
+            <input
+              type="number"
+              value={budget}
+              onChange={(e) => {
+                if (getTotalExpenses() === 0) {
+                  setBudget(parseInt(e.target.value));
+                } else {
+                  alert("You cannot change the budget if there are existing expenses.");
+                }
+              }}
+              disabled={getTotalExpenses() > 0}
+            />
+            <button onClick={resetBudget} className='reset' ></button>
+
+          </div>
+          <div className="setExpense">
+            <label>Description:</label>
+            <input
+              type="text"
+              value={newExpense}
+              onChange={(e) => setNewExpense(e.target.value)}
+            />
+            <label>Category:</label>
+            <select
+              value={newCategory}
+              onChange={(e) => setNewCategory(e.target.value)}
+            >
+              {categories.map((category) => (
+                <option key={category} value={category}>{category}</option>
               ))}
-            </tbody>
-          </table>
+            </select>
+            <label>Amount:</label>
+            <input
+              type="number"
+              value={newAmount}
+              onChange={(e) => setNewAmount(parseInt(e.target.value))}
+            />
+            <label>Date:</label>
+            <input
+              type="date"
+              value={newDate}
+              onChange={(e) => setNewDate(e.target.value)}
+            />
+            <button onClick={handleAddExpense} className='addButton'></button>
+          </div>
+          <div className="setExpense">
+            <h2>Expenses</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Description</th>
+                  <th>Category</th>
+                  <th>Amount</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                {expenses.map((expense, index) => (
+
+                  <TableExpense 
+                    expense={expense}
+                    indes={index}
+                    formatter={formatter}
+                  />
+              
+                ))}
+              </tbody>
+            </table>
+          </div>
           <div className="checkBudget">
 
             <p className="remainingMoney">Remaining Money: {formatter.format(budget - getTotalExpenses())}</p>
             {checkBudget()}
           </div>
         </div>
-
-      </div>
-
+        <div className="summary">
+          <div className="category">
+            <h2>Summary</h2>
+            {renderCategorySummary()}
+            <p className="totalExpenses">Total Expenses: {formatter.format(getTotalExpenses())} </p>
+          </div>
+          <div className="chart">
+            <Pie data={data} />
+          </div>
+        </div>
+    */}
     </>
   );
 }

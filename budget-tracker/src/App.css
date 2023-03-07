@@ -1,5 +1,4 @@
-
-  @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
 
 .App {
   text-align: center;
@@ -31,25 +30,23 @@
   color: #61dafb;
 }
 
-body{
-  background: url('./img/home-Illustrator.svg') no-repeat;
+body {
+
   background-color: #051a44;
   color: beige;
   display: flex;
-  flex-direction: column;
+
   align-items: center;
   justify-content: center;
   font-family: 'Roboto Slab', serif;
 }
-.mainContainer{
+
+/* .mainContainer{
   height: 100%;
   width: 100%;
-  flex-direction: column;
-  float: right;
-  
-
-}
-.bgLeft{
+ 
+} */
+/* .bgLeft{
 margin: auto;
   border: 1px solid rgba(114, 250, 3, 0.3);
   justify-self: center;
@@ -57,22 +54,32 @@ margin: auto;
 .homeIllustrator{
   position: fixed;
   background: url('./img/home-Illustrator.svg');
-}
-.container, .summary {
-  float: right;
-  width: 65%;
-  margin: 1rem;
-  flex-direction: column;
+} */
+.container,
+.Expenses {
+
+
+  margin: 0.5rem;
+  float: left;
+  flex-direction: row;
   backdrop-filter: blur(3px) saturate(200%);
   -webkit-backdrop-filter: blur(5px) saturate(200%);
   background-color: #041d4a;
   border-radius: 12px;
   border: 1px solid rgba(209, 213, 219, 0.3);
- 
+
 }
 
-.reset{
- 
+.container {
+  width: 50%;
+}
+
+.Expenses {
+  width: 40%;
+}
+
+.reset {
+
   background: url('./img/reset.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -80,9 +87,10 @@ margin: auto;
   width: 50px;
   height: 50px;
   vertical-align: middle;
- 
+
 }
-.addButton{
+
+.addButton {
   background: url('./img/icon-add.svg');
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -90,78 +98,95 @@ margin: auto;
   width: 50px;
   height: 50px;
   vertical-align: middle;
-  
-}
-.summary{
-  margin-top: 2rem;
-}
-h1{
-  padding: 15px;
-  text-align:center;
 
 }
-.totalExpenses{
+
+h1 {
+  padding: 15px;
+  text-align: center;
+
+}
+
+.totalExpenses {
   font-weight: bold;
   color: #fcfc00;
   font-size: 2rem;
 }
-.remainingMoney{
+
+.remainingMoney {
   font-weight: bold;
   color: #1c8249;
   font-size: 2rem;
-  
+
 }
-h2{
-  margin:5px;
-}
-.setBudget, .setExpense, .listExpense,  .category, .remainingMoney{
-  padding: 5px;
+
+h2 {
   margin: 5px;
 }
-.setExpense img{
+
+.setBudget,
+.summary,
+.listExpense,
+.category,
+.remainingMoney,
+.Expenses {
+  padding: 10px;
+  flex-flow: row;
+}
+
+.Expenses img {
   width: 40px;
 }
-input, button{
+
+input,
+button {
   margin: 10px;
   font-family: 'Roboto Slab', serif;
 }
-button{
+
+button {
   height: 30px;
 
   border-radius: 5px;
   border-color: yellow;
 }
-button:hover{
+
+button:hover {
   background-color: #fcfc00;
 }
-input{
+
+input {
   height: 20px;
 }
-label, p{
+
+label,
+p {
   margin: 5px;
 }
-table{
+
+table {
   width: 90%;
 }
-table, th, td{
+
+table,
+th,
+td {
   border: 1px solid rgb(110, 109, 109);
   text-align: center;
 }
-/* .summary{
-  display:inline;
-  
-  
-} */
-.chart , .category{
+
+.chart,
+.category {
   width: 40%;
   margin: 5px;
-  float:left;
+  float: left;
 }
 
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
