@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(25, 133, 4);
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+body {
+
+  background-color: #051a44;
+  color: beige;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto Slab', serif;
+}
+
+/* .mainContainer{
+  height: 100%;
+  width: 100%;
+ 
+} */
+/* .bgLeft{
+margin: auto;
+  border: 1px solid rgba(114, 250, 3, 0.3);
+  justify-self: center;
+}
+.homeIllustrator{
+  position: fixed;
+  background: url('./img/home-Illustrator.svg');
+} */
+.container,
+.Expenses {
+
+
+  margin: 0.5rem;
+  float: left;
+  flex-direction: row;
+  backdrop-filter: blur(3px) saturate(200%);
+  -webkit-backdrop-filter: blur(5px) saturate(200%);
+  background-color: #041d4a;
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+
+}
+
+.container {
+  width: 50%;
+}
+
+.Expenses {
+  width: 40%;
+}
+
+.reset {
+
+  background: url('./img/reset.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  line-height: 50px;
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+
+}
+
+.addButton {
+  background: url('./img/icon-add.svg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  line-height: 50px;
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+
+}
+
+h1 {
+  padding: 15px;
+  text-align: center;
+
+}
+
+.totalExpenses {
+  font-weight: bold;
+  color: #fcfc00;
+  font-size: 2rem;
+}
+
+.remainingMoney {
+  font-weight: bold;
+  color: #1c8249;
+  font-size: 2rem;
+
+}
+
+h2 {
+  margin: 5px;
+}
+
+.setBudget,
+.summary,
+.listExpense,
+.category,
+.remainingMoney,
+.Expenses {
+  padding: 10px;
+  flex-flow: row;
+}
+
+.Expenses img {
+  width: 40px;
+}
+
+input,
+button {
+  margin: 10px;
+  font-family: 'Roboto Slab', serif;
+}
+
+button {
+  height: 30px;
+
+  border-radius: 5px;
+  border-color: yellow;
+}
+
+button:hover {
+  background-color: #fcfc00;
+}
+
+input {
+  height: 20px;
+}
+
+label,
+p {
+  margin: 5px;
+}
+
+table {
+  width: 90%;
+}
+
+table,
+th,
+td {
+  border: 1px solid rgb(110, 109, 109);
+  text-align: center;
+}
+
+.chart,
+.category {
+  width: 40%;
+  margin: 5px;
+  float: left;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
